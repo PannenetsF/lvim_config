@@ -5,7 +5,8 @@ local config_names = {
   "nvim-tree",
   "treesitter",
   "true-zen",
-  "wrapping"
+  "wrapping",
+  "goto-preview",
 }
 
 for _, name in ipairs(config_names)

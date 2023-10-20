@@ -44,5 +44,11 @@ lvim.plugins = {
           create_keymaps = false,
       }
     end,
+  },
+  {
+    "rmagatti/goto-preview",
+    config = function()
+      require('goto-preview').setup {}
+    end
   }
 }
