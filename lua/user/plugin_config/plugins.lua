@@ -4,7 +4,7 @@ lvim.plugins = {
   "stevearc/dressing.nvim",
   {
     "Pocco81/auto-save.nvim",
-     config = function()
+    config = function()
       require("auto-save").setup()
     end,
   },
@@ -14,7 +14,7 @@ lvim.plugins = {
     "Pocco81/true-zen.nvim",
     config = function()
       require("true-zen").setup {
-        modes = { -- configurations per mode
+        modes = {                    -- configurations per mode
           ataraxis = {
             minimum_writing_area = { -- minimum size of main window
               width = 80,
@@ -40,8 +40,8 @@ lvim.plugins = {
   {
     "andrewferrier/wrapping.nvim",
     config = function()
-        require("wrapping").setup {
-          create_keymaps = false,
+      require("wrapping").setup {
+        create_keymaps = false,
       }
     end,
   },
@@ -50,5 +50,17 @@ lvim.plugins = {
     config = function()
       require('goto-preview').setup {}
     end
-  }
+  },
+  {
+    "lervag/vimtex",
+    ft = "tex", 
+    config = function()
+      vim.g.vimtex_view_general_viewer = 'okular'
+      vim.cmd("call vimtex#init()")
+      vim.g.tex_comment_nospell = 1
+      vim.g.vimtex_compiler_progname = 'nvr'
+      vim.g.vimtex_view_general_options = [[--unique file:@pdf\#src:@line@tex]]
+      vim.g.vimtex_view_general_options_latexmk = '--unique'
+    end,
+  },
 }
