@@ -53,7 +53,7 @@ lvim.plugins = {
   },
   {
     "lervag/vimtex",
-    ft = "tex", 
+    ft = "tex",
     config = function()
       vim.g.vimtex_view_general_viewer = 'okular'
       vim.cmd("call vimtex#init()")
@@ -63,4 +63,14 @@ lvim.plugins = {
       vim.g.vimtex_view_general_options_latexmk = '--unique'
     end,
   },
+  {
+    "ray-x/lsp_signature.nvim",
+    event = "VeryLazy",
+    opts = {},
+    config = function(_, opts) require 'lsp_signature'.setup(opts) end
+  },
+  {
+    "catppuccin/nvim",
+    name = "catppuccin"
+  }
 }

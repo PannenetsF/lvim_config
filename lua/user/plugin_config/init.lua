@@ -7,6 +7,7 @@ local config_names = {
   "true-zen",
   "wrapping",
   "goto-preview",
+  "lsp_help",
 }
 
 for _, name in ipairs(config_names)
